@@ -17,8 +17,8 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: [' ', [Validators.required, Validators.email]],
-      password: [' ', Validators.required]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     })
 
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
